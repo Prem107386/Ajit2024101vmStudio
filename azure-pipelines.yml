@@ -31,6 +31,12 @@ steps:
     orchestratorConnection: 'Ajit2024101VM'
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
     folderName: 'Prem'
+- task: UiPathRunJob@5
+  inputs:
+    orchestratorConnection: 'Ajit2024101VM'
+    processName: 'VM101_CICD_Demo_Project'
+    folderName: 'Prem'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
